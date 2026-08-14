@@ -94,3 +94,12 @@ k replace -f pod.yaml --force
 
 	#atualizando a imagem do pod que está rodando
 k set image pods webserver apache=nginx:alpine
+
+  # exibe todos os namespaces
+k get namespaces
+
+  # exibe todos os pods que estão rodando em todos os namespaces
+k get pods -A
+
+  # exibe mais informações sobre todos os pods em todos namespaces como ip, node etc.
+k get pods -A -o wide
